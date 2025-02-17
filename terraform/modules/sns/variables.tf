@@ -22,27 +22,10 @@ variable "tags" {
   type = map(any)
 }
 
-variable "kms_master_key_arn" {
+variable "default_kms_key_arn" {
   type = string
 }
 
-variable "account_id" {
+variable "os_ingestion_events_sqs_feedback_role_arn" {
   type = string
-}
-
-variable "ou" {
-  type    = map(any)
-  default = test
-}
-
-variable "s3_access_log_bucket_name" {
-  type = map(any)
-}
-
-variable "s3_replication" {
-  type = bool
-}
-
-variable "dr_parameters" {
-  type = map(any)
 }
