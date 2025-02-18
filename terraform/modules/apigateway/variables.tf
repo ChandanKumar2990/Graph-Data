@@ -45,3 +45,9 @@ variable "layer_arns" {
 variable "dal_api_lambda_role_arn" {
   type = map(any)
 }
+
+variable "db_endpoints" {
+  type = map(any)
+}
+
+
