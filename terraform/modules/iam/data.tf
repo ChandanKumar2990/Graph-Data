@@ -79,3 +79,18 @@ data "aws_iam_policy_document" "neptune_read_write_policy" {
     ]
   }
 }
+
+#SNS Assumed Role Policy Document
+data "aws_iam_policy_document" "ecldata_sns_assumed_role_policy" {
+  version = "2012-10-17"
+  statement {
+    actions = ["sts:AssumeRole"]
+    effect  = "Allow"
+    sid     = "LambdaAssumePolicy"
+    principals {
+      identifiers = ["sns.amazonaws.com"]
+      type        = "Service"
+    }
+  }
+
+}
